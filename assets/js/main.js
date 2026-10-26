@@ -37,14 +37,24 @@
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
+const navLinks = document.querySelectorAll('#navmenu a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // 기존 선택 해제
+    navLinks.forEach(item => {
+      item.parentElement.classList.remove('active');
     });
 
+    // 클릭한 메뉴 선택
+    link.parentElement.classList.add('active');
+
+    // 모바일 메뉴 닫기
+    if (document.querySelector('.mobile-nav-active')) {
+      mobileNavToogle();
+    }
   });
+});
 
   /**
    * Toggle mobile nav dropdowns
