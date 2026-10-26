@@ -18,7 +18,7 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --main-color:#e68a72;
-  --txt-color : #30473D;
+  --txt-color : #20342c;
   --background-color: #F5F7F2; /* Background color for the entire website, including individual sections */
   --default-color: #141414; /* Default color used for the majority of the text content across the entire website */
   --accent-color: #75b798; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -61,13 +61,11 @@ ol, ul{
     margin: 0;
     padding: 0;
   }
-
 a {
   color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
 }
-
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
@@ -75,16 +73,17 @@ a:hover {
 .section{
   padding: 80px 0;
 }
-
 .section .heading .inner .content .mb-0 {
   color: rgb(20, 20, 20, 0.5);
 }
-
 h2 {
   margin-bottom: 3px !important;
   font-size: 38px;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+.head_inner {
+  padding: 0 5px;
 }
 .section h2+p{
   font-size: 15px;
@@ -201,6 +200,7 @@ span.bold{
 }
 .footer .inner{
   opacity: 0.6;
+  padding: 0 7%;
 }
 .f_flex{
   display: flex;
@@ -237,10 +237,12 @@ span.bold{
   padding: 0 0 3px 8px ;
 }
 .footer .copyright {
-  opacity: 0.5;
+  text-align: left;
   padding-top: 35px;
+  opacity: 0.5;
 }
 #footer .credits{
+  text-align: left;
   opacity: 0.5;
 }
 #footer .credits .boot{
@@ -342,40 +344,44 @@ span.bold{
 --------------------------------------------------------------*/
 #hero{
   max-width: 1440px;
-  padding: 80px 5%;
+  padding: 120px 5% 80px;
+  margin: 0 auto;
 }
 .hero_inner {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
-  padding: 0 12px;
+  gap: 45px;
+  padding: 0 14px;
+}
+.hero_inner h3{
+  font-weight: 38px;
+  font-weight: 700;
+  color: var(--txt-color);
 }
 .hero_inner > .img_area {
-  width: 360px;
-  aspect-ratio: 210 / 297;
+  width: 712px;
+  aspect-ratio: 297 / 210;
   border-radius: 3px;
   overflow: hidden;
-  background: url(../image/my_img.jpg) center / cover no-repeat;
+  background: url(../image/my_img.jpg) center / 100% no-repeat;
 }
-
 .hero_inner > .right_box{
   display: inline-flex;
   flex-direction: column;
   gap: 35px;
-  width: 50%;
+  width: fit-content;
   word-break: keep-all;
+  padding-top: 50px;
 }
-#hero > .right_box .default_info {
-  padding: 0 8px;
+#hero .right_box .default_info {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
-
-  justify-content: center;
+  margin: 5px 0 0;
 }
-#hero > .right_box .default_info span.bold{
-  color: var(--txt-color);
+#hero .right_box .default_info span.bold{
+  color:  rgba(20, 20, 20, 0.78);  
   opacity: 0.7;
 }
 .overview_about p{
@@ -385,26 +391,25 @@ span.bold{
   font-size: 17px;
   font-weight: 500;
 }
+.view_resume {
+  margin-top: 30px;
+}
 .view_resume > a{
   display: inline-flex;
   align-items: center;
   gap: 4px;
   padding: 1px 14px;
-  border: 1px solid var(--accent-color);
+  color:  rgba(20, 20, 20, 0.5);
+  border: 1px solid rgba(20, 20, 20, 0.5);
   border-radius: 5px;  
 }
-#hero .default_info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.sy_resume:hover {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+.view_resume:hover a {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
   transition: all 0.5s;
 }
-.sy_resume:focus-visible {
-  outline: 2px solid var(--accent-color);
+.view_resume:focus-visible {
+  outline: 2px solid var(--main-color);
   outline-offset: 4px;
 }
 .icon_file {
@@ -533,7 +538,7 @@ span.bold{
 # Career Section
 --------------------------------------------------------------*/
 #career {
-  padding: 60px 12px;
+  padding: 60px 12px 80px;
   color: var(--default-color);
   background-color: var(--background-color);
   scroll-margin-top: 100px;
@@ -541,11 +546,12 @@ span.bold{
 #career > .inner {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
 }
 .profile_img {
-  width: 20%;
   height: 280px;
+  aspect-ratio: 7 / 9;
   background: url(../image/profile_img.jpg) center / 100% no-repeat;
 }
 #career .sy_records {
