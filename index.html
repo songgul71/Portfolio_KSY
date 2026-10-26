@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="utf-8">
@@ -19,147 +19,154 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name : Personal
-  * Template URL : https ://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Template URL : https://bootstrapmade.com/personal-free-resume-bootstrap-template/
   * Updated : Aug 07 2024 with Bootstrap v5.3.3
   * Author : BootstrapMade.com
-  * License : https ://bootstrapmade.com/license/
+  * License : https://bootstrapmade.com/license/
   ======================================================== -->
+  <link rel="stylesheet" href="about_independent.css">
 </head>
 
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero">hero</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </nav>
+    <div class="inner">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#portfolio">작업물 구경하기</a></li>
+          <li><span class="line"></span></li>
+          <li><a href="#skills">역량 훑어보기</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
   </header>
 
+  <main id=" main">
+    <div id="wrap">
 
-  <main class=" main">
+      <section id="hero">
+        <div class="hero_inner">
 
-    <section id="hero">
-      <div class="container hero_iam">
-        <p>UI/UX Desinger 
-          <span class="line"></span>
-          고소영
-        </p>
-      </div>
-      
-      <h2 class="pg_tit">
-        <strong id="first-line"></strong>
-        <strong id="second-line"></strong>
-        <span class="typing-cursor" id="cursor">&nbsp;</span>
-      </h2>
+          <div class="img_area"></div>
 
-      <div class="overview_about">
-        <div class="container aos-init aos-animate">
-          <p>사용자의 불편을 정리하고 이해하기 쉬운 화면으로 구체화합니다.</p>
+          <div class="right_box">
+
+            <h2>반갑습니다! 고소영입니다.</h2>
+              <p class="default_info">
+                <span class="bold">UI/UX Designer</span>
+                <span class="line"></span>
+                <span class="bold">고소영</span>
+                <span class="line"></span>
+                <span class="bold">27세</span>
+                <span class="line"></span>
+                <span class="bold">gin06077@naver.com</span>
+              </p>
+
+              <div class="about_intro">
+                저는 당연하게 여겨지는 것에도 질문을 던지는 편입니다.
+                <br>
+                사용자가 어디에서 망설이고, 무엇을 어려워하는지 살펴보며 그 이유를 이해하려고 노력합니다.
+                <br>
+                실무에서는 복잡한 요구사항을 사용자 흐름과 화면으로 구체화하고,
+                다양한 의견 사이에서 구현 가능한 방향을 함께 찾아왔습니다.
+              </div>
+
+              <div class="view_resume">
+                <a href="./assets/image/resume_kosoyoung.pdf" target="_blank" class="about_resume">
+                이력서 확인하기
+                <span class="bi bi-check-all icon_file" role="icon" aria-label="pdf파일"></span>
+                </a>
+              </div>
+            </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <div class="inner">
 
-      <!-- Page Title -->
-      <div class="page-title" data-aos="fade-up" data-aos-delay="100">
-        <div class="heading">
-          <div class="container">
-            <div class="row d-flex">
-              <div class="content">
-                <h2>PORTFOLIO</h2>
-                <p class="mb-0">마우스를 올리면 나타나는 아이콘을 통해 제작 페이지로 이동할 수 있습니다.
-                </p>
+          <!-- Page Title -->
+          <div class="page-title" data-aos="fade-up" data-aos-delay="100">
+            <div class="heading">
+              <div class="head_inner">
+                <div class="row d-flex">
+                <div class="content">
+                  <h2>Selected Works</h2>
+                  <p class="mb-0">관찰에서 시작해, 더 나은 경험을 고민한 기록입니다. 썸네일을 클릭하면 상세하게 확인하실 수 있습니다.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div><!-- End Page Title -->
+          </div><!-- End Page Title -->
 
-      <div class="container">
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="filter_tap">
-
-            <ul class="portfolio-filters isotope-filters" data-aos="zoom-in-up" data-aos-duration="500"
-            data-aos-delay="200" data-aos-easing="linear">
-              <li data-filter="*" class="filter-active tab_menu"><button type="button" class="portfolio-type-button" aria-pressed="true">All</button></li>
-              <li data-filter=".filter-product" class="tab_menu"><button type="button" class="portfolio-type-button" aria-pressed="false">Personal</button></li>
-              <li data-filter=".filter-books" class="tab_menu"><button type="button" class="portfolio-type-button" aria-pressed="false">Real Work</button></li>
-            </ul><!-- End Portfolio Filters -->
-
+            <div class="filter_tap">
+              <ul class="portfolio-filters isotope-filters" data-aos="zoom-in-up" data-aos-duration="500"
+              data-aos-delay="200" data-aos-easing="linear">
+                <li data-filter="*" class="filter-active tab_menu"><button type="button" class="portfolio-type-button" aria-pressed="true">All</button></li>
+                <li data-filter=".filter-product" class="tab_menu"><button type="button" class="portfolio-type-button" aria-pressed="false">Personal</button></li>
+                <li data-filter=".filter-books" class="tab_menu"><button type="button" class="portfolio-type-button" aria-pressed="false">Real Work</button></li>
+              </ul><!-- End Portfolio Filters -->
+            </div>
           </div>
-        <!-- END filter tab area -->
-          
-          <div class="row gy-4 isotope-container" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="600"
+          <!-- END filter tab area -->
+            
+          <div class="row gy-4 isotope-inner" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="600"
             data-aos-easing="linear">
 
             <!-- 실무 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-work="Real Work">
               <div class="portfolio-content h-100">
+
                 <div class="portfolio-image">
-                  <img src="assets/image/work_01.jpg" class="img-fluid" alt="시드물 웹사이트 UX 리뉴얼">
+                  <a href="assets/image/Portfolio_SIDMOOL_Kosoyoung.pdf" class="portfolio-image-link"
+                    target="_blank" rel="noopener noreferrer" aria-label="시드물 UX 개선 작업물 PDF 새 탭에서 보기">
+                    <img src="assets/image/sidmool_thumnail.jpg" class="img-fluid" alt="시드물 UX 리뉴얼 썸네일">
+                  </a>
                 </div>
 
                 <div class="portfolio-info">
-
-                  <p class="pj_label_box">시드물 웹사이트 UX 리뉴얼</p>
-
-                  <p>개인 프로젝트
+                  <p class="pj_label_box"> 
+                    시드물 웹사이트 UX 리뉴얼
                     <span class="line"></span>
-                    <span class="date">UX분석 · 정보구조 · UI 디자인</span>
-                  </p>
-
-                  <div class="item_detail">
-                    <a target="_blank" title="More Details" class="details-link" href="https://aureonkr.com/index.html">
-                      [프로젝트 과정 보기]
-                    </a>
-                  </div>
-
+                    개인</p>
+                  <p>반복되는 기능을 정리하고, 탐색의 우선순위를 재설계했습니다.</p>
+                  <p class="pj_label_box"> UX분석 · 정보구조 · UI 디자인</p>
                 </div>
+
               </div>
             </div><!-- End Portfolio Item -->
-
-            <!-- 웹/앱  -->
+            
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" data-work="Personal">
               <div class="portfolio-content h-100">
+
                 <div class="portfolio-image">
-                  <img src="assets/image/web_01.jpg" class="img-fluid" alt="할리스 반응형 리뉴얼 사이트 목업">
+                  <a href="assets/image/Portfolio_DPP_Kosoyoung.pdf" class="portfolio-image-link"
+                    target="_blank" rel="noopener noreferrer" aria-label="디지털제품여권 프로젝트 PDF 새 탭에서 보기">
+                    <img src="assets/image/mobility_thumnail.jpg" class="img-fluid" alt="디지털제품여권 플랫폼 썸네일">
+                  </a>
                 </div>
 
                 <div class="portfolio-info">
-
                   <p class="pj_label_box">디지털제품여권 솔루션 플랫폼 구축</p>
-
-                  <p>살무 프로젝트
+                  <p>실무 프로젝트
                     <span class="line"></span>
                     <span class="date">UX설계 · UI 디자인 · 정보구조 · 스타트업</span>
                   </p>
-
-                  <div class="item_detail">
-                    <a target="_blank" title="More Details" class="details-link" href="https://aureonkr.com/index.html">
-                      [프로젝트 과정 보기]
-                    </a>
-                  </div>
-
                 </div>
-              </div>
-            </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" data-work="Personal">
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" data-work="Personal">
               <div class="portfolio-content h-100">
                 <div class="portfolio-image">
                   <img src="assets/image/web_03.jpg" class="img-fluid" alt="GS건설 메인 UI 리뉴얼">
@@ -183,7 +190,7 @@
 
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books filter-product">
               <div class="portfolio-content h-100">
@@ -211,7 +218,7 @@
 
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product filter-books" data-work="Persoanl">
               <div class="portfolio-content h-100">
@@ -239,169 +246,146 @@
 
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div> -->
 
-          </div><!-- End Portfolio Container -->
+          </div><!-- End Portfolio inner -->
 
         </div>
+      </section><!-- /Portfolio Section -->
 
-      </div>
+      <!-- Skills Section -> Portfolio section tit style-->
+      <section id="skills" class="skills section">
 
-    </section><!-- /Portfolio Section -->
+        <div class="inner aos-init aos-animate">
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 about_info">
-          <div class="col-lg-4 profile_img">
-            <img src="assets/image/profile_img.jpg" class="img-fluid" alt="고소영 증명사진, 반갑습니다!">
-          </div>
-          <div class="col-lg-8 content">
-            <div class="info_list">
-
-              <div class="info_tit_area">
-                <h3>감사합니다! 고소영입니다.</h3>
-
-                <div class="info_desc">
-
-                  <P class="default_info">
-                    <span class="bold"> UI/UX Designer</span>
-                    <span class="line"></span>
-                    <span class="bold"> 고소영</span>
-                    <span class="line"></span>
-                    <span class="bold"> 27세</span>
-                    <span class="line"></span>
-                    <span class="bold"> gin06077@naver.com</span>
-                  </P>
-                    
-                  <div class="desc_area">
-                    저는 사용자의 불편을 화면 구조와 흐름으로 풀어내는 일을 선호합니다.
-                    <br>
-                    웹디자인과 퍼블리싱 경험을 바탕으로 사용자가 이해하기 쉬우면서 실제로 구현할 수 있는 화면을 고민합니다.
-                    <br>
-                    요구사항을 개발자와 조율하고 구체적인 화면으로 정리한 경험을 UX 설계 역량으로 이어가고 있습니다.
+          <!-- Page Title -->
+          <div class="page-title" data-aos="fade-up" data-aos-delay="100">
+            <div class="heading">
+              <div class="head_inner">
+                <div class="row d-flex">
+                  <div class="content">
+                    <h2>SKILLS</h2>
+                    <p class="mb-0">작업 가능한 영역을 작성해보았습니다.</p>
                   </div>
-                
-                </div>
-              </div>
-
-              <div class="info_item">
-                <h5>학력</h5>
-                <ul>
-                  <li class="list_item">
-                    <span class="muted">2018.03 ~ 2023.08</span>
-                    <p>경성대학교 <span class="line"></span> 패션디자인학과</p>
-                  </li>
-
-                  <li class="list_item">
-                    <span class="muted">2024.03 ~ 2024.10</span>
-                    <p>부산IT교육센터 <span class="line"></span> UI/UX 디자인 및 웹&앱제작 과정 수료</p>
-                  </li>
-
-                </ul>
-              </div>
-
-              <div class="info_item">
-                <h5>경력</h5>
-                <ul>
-                  <li class="list_item">
-                    <span class="muted">2025.02 ~ 2025.06 </span>
-                    <p>클로버마케팅 <span class="line"></span> 웹디자이너 <span class="line"></span> 웹디자인팀</p>
-                  </li>
-
-                  <li class="list_item">
-                    <span class="muted">2026.07 ~ 2026.05 </span>
-                    <p>(주)써큘러솔루션 <span class="line"></span> UI/UX 디자이너 <span class="line"></span>전략기획팀</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-
-            <div class="btn_area">
-              <a href="./assets/image/resume_kosoyoung.pdf" download="이력서_고소영_UIUX.pdf" class="btn_download">
-                <button type="button">
-                  <span class="icon_file" role="icon" aria-label="pdf파일"></span>
-                  이력서 확인하기
-                  <span class="bi bi-check-all"></span>
-                </button>
-              </a>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-
-    <!-- Skills Section -> Portfolio section tit style-->
-    <section id="portfolio" class="skills section">
-
-      <div class="container aos-init aos-animate">
-
-        <!-- Page Title -->
-        <div class="page-title" data-aos="fade-up" data-aos-delay="100">
-          <div class="heading">
-            <div class="container">
-              <div class="row d-flex">
-                <div class="content">
-                  <h2>SKILLS</h2>
-                  <p class="mb-0">작업 가능한 영역을 작성해보았습니다.</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div><!-- End Page Title -->
+          </div><!-- End Page Title -->
 
-          <div class="skills_table">
+            <div class="skills_table">
+            <div class="skill_unit">
+              <p class="tools">Figma</p>
+              <p class="capability">와이어프레임, UI 디자인, 프로토타입 제작</p>
+            </div>
+
+            <div class="skill_unit">
+              <p class="tools">HTML / CSS</p>
+              <p class="capability">반응형 페이지 제작 및 기존 화면 수정</p>
+            </div>
+
+            <div class="skill_unit">
+              <p class="tools">Jquiry</p>
+              <p class="capability">필터·탭 등 인터랙션 구현과 수정</p>
+            </div>
+
+            <div class="skill_unit">
+              <p class="tools">Photoshop / Illustrator</p>
+              <p class="capability">이미지 편집 및 아이콘, 웹 배너 등 그래픽 제작</p>
+            </div>
+
           <div class="skill_unit">
-            <p class="tools">Figma</p>
-            <p class="capability">와이어프레임, UI 디자인, 프로토타입 제작</p>
+            <p class="tools">AI 활용</p>
+            <p class="capability">코드 구조 파악, 수정안 비교, 오류 원인 탐색과 결과 검토</p>
+          </div>
           </div>
 
-          <div class="skill_unit">
-            <p class="tools">HTML / CSS</p>
-            <p class="capability">반응형 페이지 제작 및 기존 화면 수정</p>
-          </div>
-
-          <div class="skill_unit">
-            <p class="tools">Jquiry</p>
-            <p class="capability">필터·탭 등 인터랙션 구현과 수정</p>
-          </div>
-
-          <div class="skill_unit">
-            <p class="tools">Photoshop / Illustrator</p>
-            <p class="capability">이미지 편집 및 아이콘, 웹 배너 등 그래픽 제작</p>
-          </div>
-
-        <div class="skill_unit">
-          <p class="tools">AI 활용</p>
-          <p class="capability">코드 구조 파악, 수정안 비교, 오류 원인 탐색과 결과 검토</p>
         </div>
+      </section>
+      <!-- End skills Section -->
+
+      <section id="career" class="career_section">
+        <div class="inner">
+
+          <div class="profile_img"></div>
+
+          <div class="sy_records">
+
+            <div class="sy_record">
+              <h5>학력</h5>
+
+              <ul>
+                <li class="sy_record_item">
+                  <span class="sy_date">2018.03 ~ 2023.08</span>
+
+                  <p>
+                    경성대학교
+                    <span class="sy_divider"></span>
+                    패션디자인학과
+                  </p>
+                </li>
+
+                <li class="sy_record_item">
+                  <span class="sy_date">2024.03 ~ 2024.10</span>
+
+                  <p>
+                    부산IT교육센터
+                    <span class="sy_divider"></span>
+                    UI/UX 디자인 및 웹&amp;앱 제작 과정 수료
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sy_record">
+              <h5>경력</h5>
+
+              <ul>
+                <li class="sy_record_item">
+                  <span class="sy_date">2025.02 ~ 2025.06</span>
+
+                  <p>
+                    클로버마케팅
+                    <span class="sy_divider"></span>
+                    웹디자이너
+                    <span class="sy_divider"></span>
+                    웹디자인팀
+                  </p>
+                </li>
+
+                <li class="sy_record_item">
+                  <span class="sy_date">2025.07 ~ 2026.05</span>
+
+                  <p>
+                    (주)써큘러솔루션
+                    <span class="sy_divider"></span>
+                    UI/UX 디자이너
+                    <span class="sy_divider"></span>
+                    전략기획팀
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
         </div>
-
-      </div>
-    </section><!-- End skills Section -->
-
+      </section>
+    </div>
   </main>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container f_flex">
-      <h3 class="sitename">PORTFOLIO</h3>
+  <footer id="footer" class="footer">
+    <div class="inner f_flex">
+      <h3 class="sitename">고소영</h3>
       <p class="notion">
+        <span>작은 불편을 발견하고, 더 나은 경험을 고민합니다</span>
         <span>본 사이트는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었으며, 사용된 일부 이미지 및 폰트는 별도의 출처가 있음을 밝힙니다.</span>
-        <span>본 사이트는 지원자 본인 혼자 진행한 사실이 틀림없음을 밝힙니다.</span>
+        <span>본 사이트는 부트스트랩 템플릿을 활용하여 제작되었으나, 절반이상 직접 수정했습니다.</span>
       </p>
-    </div>
 
+    </div>
     <div class="container">
       <div class="copyright">
-        <span>Copyright</span> <strong class="px-1 sitename">Portfolio</strong>
+        <span>Copyright</span> <strong class="px-1 sitename">Kosoyoung_Portfolio</strong>
       </div>
 
       <div class="credits">
@@ -418,7 +402,6 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
   </a>
-
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -437,69 +420,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    class TypingEffect {
-      constructor() {
-        this.firstLine = "Soyoung's";
-        this.secondLine = "Portfolio";
-        this.firstElement = document.getElementById('first-line');
-        this.secondElement = document.getElementById('second-line');
-        this.cursor = document.getElementById('cursor');
-        this.typingSpeed = 180; // 타이핑 속도 (밀리초)
-        this.pauseTime = 2000; // 완성 후 대기 시간
-        this.eraseSpeed = 100; // 지우는 속도
-
-        this.startTyping();
-      }
-
-      async startTyping() {
-        while (true) {
-          // 첫 번째 줄 타이핑
-          await this.typeText(this.firstElement, this.firstLine);
-
-          // 두 번째 줄 타이핑
-          await this.typeText(this.secondElement, this.secondLine);
-
-          // 완성 후 잠시 대기
-          await this.sleep(this.pauseTime);
-
-          // 두 번째 줄부터 지우기
-          await this.eraseText(this.secondElement);
-
-          // 첫 번째 줄 지우기
-          await this.eraseText(this.firstElement);
-
-          // 다시 시작하기 전 잠시 대기
-          await this.sleep(500);
-        }
-      }
-
-      async typeText(element, text) {
-        for (let i = 0; i <= text.length; i++) {
-          element.textContent = text.substring(0, i);
-          await this.sleep(this.typingSpeed);
-        }
-      }
-
-      async eraseText(element) {
-        const text = element.textContent;
-        for (let i = text.length; i >= 0; i--) {
-          element.textContent = text.substring(0, i);
-          await this.sleep(this.eraseSpeed);
-        }
-      }
-
-      sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
-    }
-
-    // 페이지 로드 후 타이핑 효과 시작
-    document.addEventListener('DOMContentLoaded', () => {
-      new TypingEffect();
-    });
-  </script>
 
 </body>
 
