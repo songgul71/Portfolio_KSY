@@ -110,11 +110,11 @@ navLinks.forEach(link => {
       mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
-
+  
+  window.addEventListener("load", aosInit);
   /**
    * Init typed.js
-   */
+*/
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');

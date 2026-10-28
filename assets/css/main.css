@@ -17,12 +17,12 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --main-color:#e68a72;
-  --txt-color : #20342c;
-  --background-color: #F5F7F2; /* Background color for the entire website, including individual sections */
+  --main-color:#CEDB8C;
+  --txt-color : #155438;
+  --background-color: #F6F8F4; /* Background color for the entire website, including individual sections */
   --default-color: #141414; /* Default color used for the majority of the text content across the entire website */
-  --accent-color: #75b798; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --contrast-color: #F5F7F2; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --accent-color: #2BA06C; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --bg-design-color: #EDF2ED; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -80,6 +80,7 @@ h2 {
   margin-bottom: 3px !important;
   font-size: 38px;
   font-weight: 700;
+  color: var(--accent-color);
   letter-spacing: -0.02em;
 }
 .head_inner {
@@ -140,23 +141,32 @@ span.bold{
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 681px) {
-  .navmenu ul { 
-    display: flex;
-    gap: 2px;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 4px 3px;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px);
-    border: 1px solid #ffffffeb;
-    border-radius: 100px;
-  }
+  #navmenu {
+  position: fixed;
+  left: 50%;
+  bottom: 8%;
+  z-index: 9999;
+  width: max-content;
+  max-width: calc(100% - 40px);
+  transform: translateX(-50%);
+}
+
+.navmenu ul { 
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 4px 3px;
+  background: rgba(250, 250, 250, 0.5);
+  border: 1px solid rgba(21, 84, 56, 0.25);
+  border-radius: 100px;
+  backdrop-filter: blur(8px); 
+  box-shadow: #cbcbcb87 0px 1.5px 5px;
+}
 }
 .mobile-nav-active .navmenu {
   overflow: hidden;
-  background: rgba(33, 37, 41, 0.8);
-  box-shadow: #E4E4E4 1px 1px 1px;
 }
 .mobile-nav-toggle {
   display: none;
@@ -173,17 +183,18 @@ span.bold{
   font-size: 16px;
   font-weight: 500;
   font-family: var(--nav-font);
-  color: rgba(20, 20, 20, 0.6);
+  color: rgba(21, 84, 56, 0.78);
   padding: 8px 16px 5px;
   border-radius: 100px;
 }
 
 .navmenu li:hover > a {
-  color: var(--main-color);
+  color: var(--txt-color);
   transition: all 0.5s;
 }
-  .navmenu li.active > a {
-  color: var(--main-color);
+
+.navmenu li.active > a {
+  color: var(--txt-color);
   font-weight: 600;
   transition: all 0.5s;
 }
@@ -196,7 +207,7 @@ span.bold{
   font-size: 14px;
   padding: 60px 0 35px;
   text-align: center;
-  background-color: rgba(117,183,152,0.15) ;
+  background: var(--bg-design-color);
 }
 .footer .inner{
   opacity: 0.6;
@@ -372,6 +383,24 @@ span.bold{
   width: fit-content;
   word-break: keep-all;
   padding-top: 50px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-60px);
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 1.2s;
+  will-change: opacity, transform;
+}
+.hero_inner > .right_box.is_visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+#hero .right_box .top_box > h2 {
+  color: var(--txt-color);
 }
 #hero .right_box .default_info {
   display: flex;
@@ -400,25 +429,121 @@ span.bold{
   gap: 4px;
   padding: 1px 14px;
   color:  rgba(20, 20, 20, 0.5);
-  border: 1px solid rgba(20, 20, 20, 0.5);
+  border: 1px solid rgba(20, 20, 20, 0.2);
   border-radius: 5px;  
 }
 .view_resume:hover a {
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
+  color: var(--txt-color);
+  background: var(--bg-design-color);
+  border: 1px solid var(--txt-color);
   transition: all 0.5s;
 }
 .view_resume:focus-visible {
-  outline: 2px solid var(--main-color);
+  outline: 1px solid var(--txt-color);
   outline-offset: 4px;
+  transition: all 0.5s;
 }
 .icon_file {
   font-size: 26px;
 }
+@media (min-width: 701px) {
+  .hero_inner > .img_area,
+  .hero_inner > .right_box {
+    will-change: transform, opacity;
+  }
 
+  /*
+   * 첫 화면
+   * 사진이 브라우저 중앙에서 1.2배로 시작
+   */
+  .hero_inner.motion_ready:not(.zoom_done) > .img_area {
+    transform:
+      translateX(var(--hero_image_shift, 0px))
+      scale(1.2);
+
+    transform-origin: center;
+    transition: none;
+  }
+
+/* scale 1.2 → 1: 2초 */
+.hero_inner.motion_ready.zoom_done:not(.is_active) > .img_area {
+  transform:
+    translateX(var(--hero_image_shift, 0px))
+    scale(1);
+
+  transform-origin: center;
+
+  transition:
+    transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 사진 왼쪽 이동: 1.5초 */
+.hero_inner.motion_ready.is_active > .img_area {
+  transform: translateX(0) scale(1);
+  transform-origin: center;
+
+  transition:
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* right_box 등장: 1.5초 */
+.hero_inner.motion_ready.is_active > .right_box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+  /*사진이 왼쪽으로 이동, right_box 등장 */
+  .hero_inner.motion_ready.is_active > .right_box {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+
+    transition:
+      opacity 0.8s ease 0.2s,
+      transform 1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero_inner > .img_area,
+  .hero_inner > .right_box {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero_inner > .img_area,
+  .hero_inner > .right_box {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero_inner > .img_area,
+  .hero_inner > .right_box {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+#portfolio {
+  background: var(--bg-design-color);
+}
 .portfolio-info {
   padding: 12px 4px 0;
 }
@@ -504,15 +629,15 @@ span.bold{
 --------------------------------------------------------------*/
 .skills_table {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   padding: 40px 0 12px;
   width: 100%;
 }
 .skills_table > .skill_unit{
-  padding: 28px 22px;
-  border-radius: 8px;
-  border: 1px solid var(--accent-color);
+  padding: 26px 42px;
+  border-radius: 5px;
+  background: rgba(237, 242, 237, 0.8);
 }
 .skills_table > .skill_unit .tools{
   font-size: 18px;
@@ -521,6 +646,7 @@ span.bold{
 .skills_table > .skill_unit p.capability {
   font-size: 15px;
   font-weight: 400;
+  margin: 0;
 }
 
 @media (max-width: 991px) {
@@ -538,7 +664,7 @@ span.bold{
 # Career Section
 --------------------------------------------------------------*/
 #career {
-  padding: 60px 12px 80px;
+  padding: 60px 12px 120px;
   color: var(--default-color);
   background-color: var(--background-color);
   scroll-margin-top: 100px;
@@ -546,14 +672,9 @@ span.bold{
 #career > .inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 50px;
 }
-.profile_img {
-  height: 280px;
-  aspect-ratio: 7 / 9;
-  background: url(../image/profile_img.jpg) center / 100% no-repeat;
-}
+
 #career .sy_records {
   display: flex;
   flex-direction: column;
