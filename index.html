@@ -77,15 +77,14 @@
               <br>실무에서는 다양한 의견을 조율하면서
               <br>복잡한 요구사항을 사용자 흐름과 화면으로 구현 가능한 방향을 찾아왔습니다.
             </div>
-
-            <div class="view_resume">
-              <a href="./assets/image/resume_kosoyoung.pdf" target="_blank" class="about_resume">
-              이력서 확인하기
-              <span class="bi bi-check-all icon_file" role="icon" aria-label="pdf파일"></span>
+              
+            <div class="view_more">
+              <a href="#portfolio" class="about_work"> 작업물 확인하기
+                <span class="bi bi-check-all icon_file" aria-hidden="true"></span>
               </a>
             </div>
-              
-            </div>
+
+          </div>
         </div>
       </section>
 
@@ -121,7 +120,73 @@
           <!-- END filter tab area -->
             
           <div class="row gy-4 isotope-container" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="600" data-aos-easing="linear">
-            <!-- 시드물 -->
+
+            <!-- Figma Link -->
+            <div
+              class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product"
+              data-work="Personal"
+            >
+              <div class="portfolio-content h-100">
+                <div class="portfolio-image">
+                  <a
+                    href="
+[https://www.figma.com/design/fn3IgloZl8aCX4oKm6K87P/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EA%B3%A0%EC%86%8C%EC%98%81?node-id=0-1&t=ymeigtF1Uebbsvid-1](https://www.figma.com/design/fn3IgloZl8aCX4oKm6K87P/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EA%B3%A0%EC%86%8C%EC%98%81?node-id=0-1&t=ymeigtF1Uebbsvid-1)"
+                    class="portfolio-image-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="피그마 작업 새 탭에서 보기"
+                  >
+                    <img
+                      src="assets/image/figma_thumnail.jpg"
+                      class="img-fluid"
+                      alt="피그마 작업물 보러가기 썸네일"
+                    >
+                  </a>
+                </div>
+
+                <div class="portfolio-info">
+                  <p class="pj_label_box">
+                    피그마에서 UI/UX 확인하기
+                    <span class="line"></span>
+                    개인
+                  </p>
+
+                  <p>
+                    첨부된 프로젝트를 피그마에서 원본으로 확인하실 수 있습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- DPP -->
+            <div
+              class="col-lg-3 col-md-6 portfolio-item isotope-item filter-books"
+              data-work="Real Work"
+            >
+              <div class="portfolio-content h-100">
+                <div class="portfolio-image">
+                  <a
+                    href="assets/image/Portfolio_DPP_Kosoyoung.pdf"
+                    class="portfolio-image-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="디지털제품여권 프로젝트 PDF 새 탭에서 보기"
+                  >
+                    <img
+                      src="assets/image/mobility_thumnail.jpg"
+                      class="img-fluid"
+                      alt="디지털제품여권 플랫폼 썸네일"
+                    >
+                  </a>
+                </div>
+
+                <div class="portfolio-info">
+                  <!-- 현재 DPP 설명 내용 그대로 유지 -->
+                </div>
+              </div>
+            </div>
+
+                        <!-- UX Renewal SIDMOOL-->
             <div
               class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product"
               data-work="Personal"
@@ -161,33 +226,6 @@
               </div>
             </div>
 
-            <!-- DPP -->
-            <div
-              class="col-lg-3 col-md-6 portfolio-item isotope-item filter-books"
-              data-work="Real Work"
-            >
-              <div class="portfolio-content h-100">
-                <div class="portfolio-image">
-                  <a
-                    href="assets/image/Portfolio_DPP_Kosoyoung.pdf"
-                    class="portfolio-image-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="디지털제품여권 프로젝트 PDF 새 탭에서 보기"
-                  >
-                    <img
-                      src="assets/image/mobility_thumnail.jpg"
-                      class="img-fluid"
-                      alt="디지털제품여권 플랫폼 썸네일"
-                    >
-                  </a>
-                </div>
-
-                <div class="portfolio-info">
-                  <!-- 현재 DPP 설명 내용 그대로 유지 -->
-                </div>
-              </div>
-            </div>
           </div>
           
         </div><!-- End Portfolio inner -->
@@ -241,6 +279,30 @@
 
       <section id="career" class="career_section">
         <div class="inner">
+
+<div class="view_resume">
+  <a
+    href="./assets/image/resume_kosoyoung.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="resume_preview"
+    aria-label="고소영 이력서 PDF 새 창에서 보기"
+  >
+    <img
+      src="./assets/image/resume_preview.jpg"
+      alt="고소영 이력서 첫 페이지 미리보기"
+      class="resume_preview_image"
+    >
+
+    <span class="resume_preview_overlay">
+      <span class="resume_preview_text">이력서 확인하기</span>
+      <span
+        class="bi bi-check-all icon_file"
+        aria-hidden="true"
+      ></span>
+    </span>
+  </a>
+</div>
 
           <div class="sy_records">
 
@@ -360,8 +422,9 @@
   (() => {
     const hero_inner = document.querySelector("#hero .hero_inner");
     const img_area = hero_inner?.querySelector(".img_area");
+    const right_box = hero_inner?.querySelector(".right_box");
 
-    if (!hero_inner || !img_area) return;
+    if (!hero_inner || !img_area || !right_box) return;
 
     const desktop_query = window.matchMedia(
       "(min-width: 701px)"
@@ -394,8 +457,11 @@
         !desktop_query.matches ||
         reduce_motion_query.matches
       ) {
+        right_box.classList.add("is_visible");
         return;
       }
+
+      right_box.classList.remove("is_visible");
 
       /*
       * 최종 위치에 있는 사진의 중앙과
