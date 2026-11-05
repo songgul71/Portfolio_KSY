@@ -107,8 +107,8 @@ img { display: block; max-width: 100%; height: auto; }
 /* Figma 바로가기 */
 #footnote { padding-top: 84px; border-top: 1px solid var(--line);}
 .work-footnote { padding: 32px 42px; border-radius: 5px; background-color: rgba(220, 225, 232, 0.4);}
-.work-footnote p { color: var(--secondary); font-size: 15px; }
-.work-footnote > .quiet-link {font-size: 15px; margin-top: 12px; display: inline-block; min-height: inherit;}
+.work-footnote > .quiet-link {font-size: 15px; display: inline-block; min-height: inherit;}
+.work-footnote p { color: var(--secondary); font-size: 15px; margin-top: 12px; }}
 
 /* 일하는 방식 */
 .approach-section { padding-top: 84px; }
